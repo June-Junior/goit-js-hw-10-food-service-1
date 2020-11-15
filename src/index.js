@@ -25,9 +25,10 @@ function onToggleSwitchClick(evt) {
     
     console.log(body.classList.contains('dark-theme'));
     if (themeToggleSwitch.checked) {
+        
         console.log("true");
         
-        localStorage.setItem ('night', JSON.stringify({1: 2, 2: 1}));
+        localStorage.setItem ('night', JSON.stringify({ДещоВзагалі_рандомне: 1, somethingToCheck_IF_IT_works: null, NoFuss: false}));
         console.log(localStorage.getItem('night'));
         body.classList.remove('light-theme');
         body.classList.add('dark-theme');
@@ -44,7 +45,7 @@ function onToggleSwitchClick(evt) {
 function localStorageCheck() {
     const switchOn = localStorage.getItem('night');
     if (switchOn) {
-        // localStorage.setItem ('my-theme', JSON.stringify({1: 2, 2: 1}));
+
         body.classList.add('dark-theme');
         themeToggleSwitch.checked = true;
     } 
